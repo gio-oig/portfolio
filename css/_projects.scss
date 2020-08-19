@@ -1,0 +1,80 @@
+.projects {
+  width: 90%;
+  margin: auto;
+  min-height: 90vh;
+  @include flex(space-between, center, row);
+  text-align: center;
+  flex-wrap: wrap;
+  h2 {
+    margin: 2rem;
+  }
+}
+
+div.project_box {
+  margin-bottom: 40px;
+}
+
+div.img_box {
+  position: relative;
+  max-width: 700px;
+  height: 350px;
+  // margin-top: 8rem;
+  border: 2px solid $background-color;
+  overflow: hidden;
+}
+
+div.img_box a {
+  position: absolute;
+
+  transform: translate(-50%, -50%);
+  padding: 10px 20px;
+  color: #fff;
+  background-color: $background-color;
+  opacity: 0;
+  cursor: pointer;
+}
+
+div.img_box:hover a {
+  animation: anim 1s ease-in-out forwards;
+}
+
+div.img_box::before {
+  content: '';
+  position: absolute;
+  top: -100px;
+  left: -150px;
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background-color: #38a4d380;
+  transition: all 0.8s ease-in-out;
+}
+
+div.img_box:hover::before {
+  width: 170%;
+  height: 170%;
+}
+
+.projects img {
+  object-fit: cover;
+  width: 100%;
+  height: 100%;
+}
+
+@keyframes anim {
+  0% {
+    top: -50%;
+    left: -50%;
+    opacity: 0;
+  }
+  80% {
+    top: 50%;
+    left: 60%;
+    opacity: 0.8;
+  }
+  100% {
+    top: 50%;
+    left: 50%;
+    opacity: 1;
+  }
+}
