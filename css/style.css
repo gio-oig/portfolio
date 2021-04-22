@@ -323,44 +323,41 @@ div.project_box {
 
 div.img_box {
   position: relative;
-  max-width: 700px;
+  max-width: 600px;
   height: 350px;
   border: 2px solid #154353;
   overflow: hidden;
 }
 
+.img_box:hover img {
+  -webkit-transform: scale(1.1);
+          transform: scale(1.1);
+  -webkit-transition: -webkit-transform 6s cubic-bezier(0.25, 0.45, 0.45, 0.95);
+  transition: -webkit-transform 6s cubic-bezier(0.25, 0.45, 0.45, 0.95);
+  transition: transform 6s cubic-bezier(0.25, 0.45, 0.45, 0.95);
+  transition: transform 6s cubic-bezier(0.25, 0.45, 0.45, 0.95), -webkit-transform 6s cubic-bezier(0.25, 0.45, 0.45, 0.95);
+}
+
 div.img_box a {
   position: absolute;
+  top: 50%;
+  left: 50%;
   -webkit-transform: translate(-50%, -50%);
           transform: translate(-50%, -50%);
   padding: 10px 20px;
   color: #fff;
-  background-color: #154353;
+  background-color: #2978b5;
+  border-radius: 10px;
+  -webkit-box-shadow: 0 0 10px #8ab6d6;
+          box-shadow: 0 0 10px #8ab6d6;
   opacity: 0;
   cursor: pointer;
+  -webkit-transition: 0.5s ease-in-out;
+  transition: 0.5s ease-in-out;
 }
 
 div.img_box:hover a {
-  -webkit-animation: anim 1s ease-in-out forwards;
-          animation: anim 1s ease-in-out forwards;
-}
-
-div.img_box::before {
-  content: '';
-  position: absolute;
-  top: -100px;
-  left: -150px;
-  width: 10px;
-  height: 10px;
-  border-radius: 50%;
-  background-color: #38a4d380;
-  -webkit-transition: all 0.8s ease-in-out;
-  transition: all 0.8s ease-in-out;
-}
-
-div.img_box:hover::before {
-  width: 170%;
-  height: 170%;
+  opacity: 1;
 }
 
 .projects img {
@@ -368,42 +365,6 @@ div.img_box:hover::before {
      object-fit: cover;
   width: 100%;
   height: 100%;
-}
-
-@-webkit-keyframes anim {
-  0% {
-    top: -50%;
-    left: -50%;
-    opacity: 0;
-  }
-  80% {
-    top: 50%;
-    left: 60%;
-    opacity: 0.8;
-  }
-  100% {
-    top: 50%;
-    left: 50%;
-    opacity: 1;
-  }
-}
-
-@keyframes anim {
-  0% {
-    top: -50%;
-    left: -50%;
-    opacity: 0;
-  }
-  80% {
-    top: 50%;
-    left: 60%;
-    opacity: 0.8;
-  }
-  100% {
-    top: 50%;
-    left: 50%;
-    opacity: 1;
-  }
 }
 
 .form-section {
@@ -455,7 +416,7 @@ div.img_box:hover::before {
 }
 
 .form-section form textarea {
-  font-family: "Montserrat", sans-serif;
+  font-family: 'Montserrat', sans-serif;
   font-size: 2rem;
 }
 
