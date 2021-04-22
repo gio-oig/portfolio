@@ -315,6 +315,7 @@ nav ul {
 
 .projects h2 {
   margin: 2rem;
+  color: #3f3f44;
 }
 
 div.project_box {
@@ -325,7 +326,9 @@ div.img_box {
   position: relative;
   max-width: 600px;
   height: 350px;
-  border: 2px solid #154353;
+  border: 20px solid #d1d1d1;
+  border-radius: 50px;
+  border-left: 20px solid #2978b5;
   overflow: hidden;
 }
 

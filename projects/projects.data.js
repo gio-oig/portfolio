@@ -1,5 +1,10 @@
 const projects = [
 	{
+		title: 'Social Network',
+		link: 'https://onespace-vue.herokuapp.com/',
+		image: '../img/onespace.png',
+	},
+	{
 		title: 'Github Finder',
 		link: 'https://gio-oig.github.io/github-finder/#/',
 		image: '../img/react-git-finder.png',
