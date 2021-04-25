@@ -20,9 +20,9 @@ div.img_box {
 	max-width: 600px;
 	height: 350px;
 	// margin-top: 8rem;
-	border: 20px solid rgb(209, 209, 209);
+	border: 15px solid rgb(209, 209, 209);
 	border-radius: 50px;
-	border-left: 20px solid #2978b5;
+	border-left: 15px solid #2978b5;
 	overflow: hidden;
 }
 .img_box:hover img {
@@ -88,3 +88,10 @@ div.img_box:hover::before {
 // 		opacity: 1;
 // 	}
 // }
+
+@media (max-width: 400px) {
+	div.img_box {
+		border: 5px solid rgb(209, 209, 209);
+		border-left: 5px solid #2978b5;
+	}
+}
